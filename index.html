@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,7 @@
 <body>
   <div id="app"></div>
   <script type="module" src="./dist/index.js"></script>
+  <!-- WebSocket connection for live reload -->
   <script>
     const ws = new WebSocket('ws://' + location.host + '/ws');
     ws.onmessage = (e) => { if(e.data === 'reload') location.reload(); };
